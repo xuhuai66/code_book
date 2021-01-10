@@ -1,0 +1,19 @@
+@import "../add/add.wxss";
+
+.card_time {
+        font-size: 28rpx;
+        color: #9e9e9e;
+        letter-spacing: 3rpx;
+}
+
+.card_time text {
+        letter-spacing: 1rpx;
+}
+
+.card_copy {
+        font-size: 28rpx;
+        text-align: center;
+        color: #4e84fe;
+        margin-top: 20rpx;
+        letter-spacing: 3rpx;
+}

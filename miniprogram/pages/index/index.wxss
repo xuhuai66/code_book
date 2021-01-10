@@ -1,0 +1,38 @@
+.contain_box {
+        width: 100%;
+        display: flex;
+}
+
+.contain_card {
+        width: calc(100% - 80px);
+        display: flex;
+        background-color: #fff;
+        height: 100vh;
+        overflow-y: scroll;
+        flex-direction: column;
+        box-sizing: border-box;
+}
+.card_add{
+        position: fixed;
+        left: 80px;
+        bottom: 30rpx;
+        width: calc(100% - 80px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+}
+.card_add view{
+        width: 80%;
+        height: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:40rpx;
+        background-color: #4e84fe;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 3rpx;
+        font-size: 28rpx;
+        letter-spacing: 4rpx;
+}

@@ -1,0 +1,80 @@
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<van-toast id="custom-selector" />
+
+<block wx:if="{{show_main}}">
+	<view class="main_box">
+		<view class="main_card">
+			<view class="card_time">更新于：<text>{{time}}</text></view>
+			<view class="card_item">
+				<view class="card_title">标题
+					<text>*</text>
+				</view>
+				<view class="card_input" bindtap="copy" data-copy="{{title}}">
+					<input placeholder-style="text-align:right" value="{{title}}" disabled />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">账号
+					<text>*</text></view>
+				<view class="card_input" bindtap="copy" data-copy="{{account}}">
+					<input placeholder-style="text-align:right" disabled value="{{account}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">密码
+					<text>*</text></view>
+				<view class="card_input" bindtap="copy" data-copy="{{password}}">
+					<input placeholder-style="text-align:right" disabled value="{{password}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">类型
+					<text>*</text></view>
+				<view class="card_input" bindtap="copy" data-copy="{{kind}}">
+					<input placeholder-style="text-align:right" disabled value="{{kind}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">用户</view>
+				<view class="card_input" bindtap="copy" data-copy="{{user}}">
+					<input placeholder-style="text-align:right" disabled value="{{user?user:'无记录'}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">电话</view>
+				<view class="card_input" bindtap="copy" data-copy="{{phone}}">
+					<input placeholder-style="text-align:right" disabled value="{{phone?phone:'无记录'}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">邮箱</view>
+				<view class="card_input" bindtap="copy" data-copy="{{email}}">
+					<input placeholder-style="text-align:right" disabled value="{{email?email:'无记录'}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">网址</view>
+				<view class="card_input" bindtap="copy" data-copy="{{site}}">
+					<input placeholder-style="text-align:right" disabled value="{{site?site:'无记录'}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">备注</view>
+				<view class="card_input" bindtap="copy" data-copy="{{tips}}">
+					<input placeholder-style="text-align:right" disabled value="{{tips?tips:'无记录'}}" />
+				</view>
+			</view>
+			<view class="card_copy">点击单行即可复制</view>
+		</view>
+	</view>
+	<van-goods-action>
+		<van-goods-action-icon icon="wap-home-o" text="首页" bind:click="go_index" />
+		<van-goods-action-icon icon="close" text="删除" bind:click="remove" />
+		<van-goods-action-button color="#84a9ff" text="修改" bind:click="to_eidt" />
+		<van-goods-action-button color="#4e84fe" text="复制全部" bind:click="copy_all" />
+	</van-goods-action>
+</block>
+<block wx:if="{{!show_main}}">
+	<van-empty description="暂未更新" />
+</block>

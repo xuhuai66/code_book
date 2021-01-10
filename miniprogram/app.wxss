@@ -1,0 +1,37 @@
+page {
+  background-color: #4e84fe;
+}
+
+.main_box {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 30rpx;
+  flex-direction: column;
+}
+
+.main_card {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 30rpx;
+  box-shadow: 14rpx 13rpx 38rpx -7rpx rgba(0, 0, 0, 0.55);
+  background-color: #fff;
+  border-radius: 18rpx;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.shadow {
+  box-shadow: 14rpx 13rpx 38rpx -7rpx rgba(0, 0, 0, 0.55);
+}
+
+.but_on {
+  background-color: #004af5 !important;
+}

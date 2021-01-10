@@ -1,0 +1,77 @@
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<van-toast id="custom-selector" />
+<block wx:if="{{show_main}}">
+	<view class="main_box">
+		<view class="main_card">
+			<view class="card_item">
+				<view class="card_title">标题
+					<text>*</text>
+				</view>
+				<view class="card_input">
+					<input placeholder="请输入标题" placeholder-style="text-align:right" bindinput="get_title" value="{{title}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">账号
+					<text>*</text></view>
+				<view class="card_input">
+					<input placeholder="请输入账号" placeholder-style="text-align:right" bindinput="get_account" value="{{account}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">密码
+					<text>*</text></view>
+				<view class="card_input">
+					<input placeholder="请输入密码" placeholder-style="text-align:right" bindinput="get_password" value="{{password}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">类型
+					<text>*</text></view>
+				<view class="card_input">
+					<picker bindchange="bindPickerChange" value="{{kind_index}}" range="{{kind}}">
+						<view class="card_choose">
+							当前选择：{{kind[kind_index]}}
+							<van-icon name="arrow" />
+						</view>
+					</picker>
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">用户</view>
+				<view class="card_input">
+					<input placeholder="请输入用户名" placeholder-style="text-align:right" bindinput="get_user" value="{{user}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">电话</view>
+				<view class="card_input">
+					<input maxlength="11" placeholder="请输入电话号码" placeholder-style="text-align:right" bindinput="get_phone" value="{{phone}}" type="number" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">邮箱</view>
+				<view class="card_input">
+					<input placeholder="请输入邮箱" placeholder-style="text-align:right" bindinput="get_email" value="{{email}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">网址</view>
+				<view class="card_input">
+					<input placeholder="请输入注册网址" placeholder-style="text-align:right" bindinput="get_site" value="{{site}}" />
+				</view>
+			</view>
+			<view class="card_item">
+				<view class="card_title">备注</view>
+				<view class="card_input">
+					<input placeholder="请输入备注信息" placeholder-style="text-align:right" bindinput="get_tips" value="{{tips}}" />
+				</view>
+			</view>
+			<view class="to_up shadow" hover-class="but_on" bindtap="check">马上提交</view>
+		</view>
+	</view>
+</block>
+<block wx:if="{{!show_main}}">
+	<van-empty description="暂未更新" />
+</block>

@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/enter/enter",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/add/add",
+    "pages/edit/edit"
+  ],
+  "window": {
+    "backgroundColor": "#4e84fe",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4e84fe",
+    "navigationBarTitleText": "我的密码本",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

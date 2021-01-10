@@ -1,0 +1,30 @@
+<block wx:if="{{show_main}}">
+	<view class="contain_box">
+		<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+			<block wx:for="{{kind}}" wx:key="*this">
+				<van-sidebar-item title="{{item}}" custom-class="" />
+			</block>
+		</van-sidebar>
+		<view class="contain_card">
+			<van-cell-group border="{{false}}">
+				<block wx:for="{{list}}" wx:key="*this" wx:for-index="list_index">
+					<view wx:for="{{item}}" wx:key="_id" wx:for-item="itemName" hidden="{{list_index!=activeKey}}">
+						<van-cell title="{{itemName.title}}" is-link center link-type="navigateTo" url="/pages/detail/detail?_id={{itemName._id}}" />
+					</view>
+				</block>
+			</van-cell-group>
+		</view>
+	</view>
+	<van-toast id="van-toast" />
+	<view class="card_add">
+		<view class="shadow" hover-class="but_on" bindtap="go_add">添加新账号</view>
+	</view>
+
+</block>
+<block wx:if="{{!show_main}}">
+	<van-cell-group>
+		<block wx:for="{{shen_data}}" wx:key="title">
+			<van-cell title="{{item.title}}" value="{{item.account}}" label="{{item.password}}" center bind:click="copy" data-copy="{{item.password}}" />
+		</block>
+	</van-cell-group>
+</block>

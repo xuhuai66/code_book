@@ -1,0 +1,14 @@
+<van-toast id="van-toast" />
+<view class="contain_box">
+	<view class="main_card ">
+		<view class="card_title">💐欢迎光临！！！</view>
+		<view class="card_input">
+			<input placeholder="请输入访问秘钥" bindinput="get_password" value="{{password}}"></input>
+		</view>
+		<view class="card_button shadow" hover-class="but_on" bindtap="check">马上进入</view>
+	</view>
+</view>
+<view class="copyright">
+	<view>Copyright © 2021 Xupt</view>
+	<view style="font-size:26rpx">miniprogram@88.com</view>
+</view>
